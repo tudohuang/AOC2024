@@ -5,7 +5,8 @@ def calculate_similarity_score(file_path):
         pairs = [list(map(int, line.split())) for line in file]
     
 
-    left_list, right_list = zip(*pairs)
+        left_list = [pair[0] for pair in pairs]
+        right_list = [pair[1] for pair in pairs]
     
     right_counts = Counter(right_list)
     
