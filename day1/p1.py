@@ -1,6 +1,7 @@
 def calculate_total_distance(file_path):
     with open(file_path, 'r') as file:
         pairs = [list(map(int, line.split())) for line in file]
+        
         left_list = [pair[0] for pair in pairs]
         right_list = [pair[1] for pair in pairs]
 
